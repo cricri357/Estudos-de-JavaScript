@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        body {
+           font: normal 20pt Arial; 
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual seu nome?') // prompt pedindo o nome
+        // nome.length (atributo do tamanho da string)
+        // L E N G T H
+        document.write(`Olá <strong>${nome}</strong>, seu nome tem ${nome.length} letras!<br>`) // escreve no documento funciona como digitar no html, usa-se placeholder 
+        //SEMPRE COM CRASE
+        document.write(`SEU NOME É ${nome.toUpperCase()}!<br>`) // método toUpperCase para letras maiúsculas
+        document.write(`seu nome é ${nome.toLowerCase()}!`) // método toLOwerCase para letras maiúsculas
+
+        var n1 = window.prompt('dinheiro')
+
+        // não sei por que não funciona
+        n1 = n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // comando para mudar o tipo de moeda
+        n1 = n1.toFixed(2) // comando para mudar a quantidade casas decimais
+        n1 = n1.replace('.', ',') // trocar . por ,
+        window.document.write(`dinheiro ${n1}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando DOM</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 10pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos de DOM</h1>
+    <p><strong>Lorem</strong> ipsum dolor sit amet consectetur adipisicing elit. Architecto, illum.</p>
+    <p>Aqui vai o resultado</p>
+    <div id="msg" class="msg">Clique aqui</div>
+
+    <script>
+
+        var corpo = window.document.body // atribuiu o body do html à variável corpo
+        var p1 = window.document.getElementsByTagName('p')[0] // pegou o elemento pelo nome (p) (0 é o primeiro) (0, 1, 2)
+        var mensagem = window.document.getElementById('msg') //pegou o elemento pelo id
+        var mensagem = window.document.querySelector('div#msg') //pegou o elemento pelo id (#)
+        var mensagem = window.document.querySelector('div.msg') //pegou o elemento pela class (.)
+
+        window.document.write('Está escrito: ' + p1.innerHTML) // atributo html interno de p1
+        p1.style.color = 'red' // atributo estilo, atributo cor mudou para vermelho
+
+        corpo.style.backgroundColor = 'skyblue' // atributo estilo, atributo cor mudou para 'skyblue'
+
+        mensagem.style.background = 'green' 
+        mensagem.innerText = 'Outro texto' // mudou o texto interno do html
+
+    </script>
+</body>
+</html>

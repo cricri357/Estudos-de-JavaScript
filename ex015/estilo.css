@@ -1,0 +1,28 @@
+body {
+    background: rgb(48, 48, 152);
+    background: rgb(94, 223, 255);
+    color: whitesmoke;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    color: black;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+}

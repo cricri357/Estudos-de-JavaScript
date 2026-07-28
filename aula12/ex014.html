@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Digite seu país de moradia</h1>
+    <input type="text" id="pais">
+    <input type="button" value="VERIFICA" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar() { // função clicar chamada no evento onclick do botão
+            var pais = window.document.getElementById('pais') // pega o elemento do input do pelo id 
+            var p = String(pais.value) // valor do input para string
+            var res = window.document.querySelector('div#res') // query selector pega o elemento div de id res
+            res.innerHTML = `Morando em ${p} <br>` // muda o html 
+
+            if (p == 'Brasil') { // se for igual a brasil muda o html para brasileiro 
+                res.innerHTML += 'Brasileiro'
+            } else { // senão muda para estrangeiro
+                res.innerHTML += 'Estrangeiro'
+            }
+        }
+    </script>
+</body>
+
+</html>

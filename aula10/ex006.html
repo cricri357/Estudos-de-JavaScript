@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: 20pt;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+        Interaja...
+    </div>
+    <script>
+        var area = window.document.getElementById('area') // pega pelo id o elemento area
+
+        area.addEventListener('click', clicar) // listener de eventos ('evento', função) (melhor do que declarar na tag do html)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar() { // declarada a função clicar
+            area.innerText = 'Clicou' // muda o atributo innertext para clicou
+            area.style.background = 'red' // muda no atributo style o atributo background para vermelho 
+        }
+        function entrar() { // declarada a função entrar
+            area.innerText = 'Entrou' // muda o atributo innertext para entrou
+        }
+        function sair() { // declarada a função sair
+            area.innerText = 'Interaja...' // muda o atributo innertextpara interaja
+            area.style.background = 'green' // no atributo style o atributo background para verde
+        }
+    </script>
+</body>
+</html>
