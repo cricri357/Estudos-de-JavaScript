@@ -9,10 +9,30 @@ function estaContido(valor) { // função que checa se um determinado numero est
     return false // se não encorntrar retorna false
 }
 
+function soma() { // calcula a soma do array
+    let sum = 0
+    for (let i = 0; i < numeros.length; i++) { // percorre o array somando todos os valores
+        sum += numeros[i]
+    }
+    return sum
+} 
+
+function avg() { // calcula a media do array
+    let avg = 0
+    for (let i = 0; i < numeros.length; i++) { // percorre o array somando todos os valores
+        avg += numeros[i]
+    }
+    avg = avg/(numeros.length) // divide a soma pela quantidade de itens do array
+    return avg
+}
+
 function adicionar() { // função adicionar, variaveis com query selector com cada elemento
     let tabela = document.querySelector('select#tabela')
     let valor = document.querySelector('input#valor').value
     let input = document.querySelector('input#valor')
+
+    let res = document.querySelector('div#resultado') 
+    res.innerHTML = ` ` // limpa div de resultado
     
     if (valor.length == 0) { // checa se foi digitado algum valor
         input.value = ` `
@@ -42,10 +62,20 @@ function adicionar() { // função adicionar, variaveis com query selector com c
 
 }
 
-function finalizar() {
-    if (numeros.length == 0) {
+function finalizar() { // função finalizar
+    let res = document.querySelector('div#resultado') 
+    res.innerHTML = ` ` // limpa div de resultado
+
+    if (numeros.length == 0) { // se o array está vazio emite alerta
         window.alert('Adicione um valor válido!')
     } else {
-        
+        let res_p = document.createElement('p') // cria elemento paragrafo
+        res.appendChild(res_p) // instancia o p na div resultado
+        res_p.innerText = `Ao todo temos ${numeros.length} número(s) cadastrados.
+        O maior valor informado foi ${Math.max(...numeros)}.
+        O menor valor informado foi ${Math.min(...numeros)}.
+        Somando todos os valores, temos ${soma()}.
+        A média dos valores digitados é ${avg()}.`
+        // muda o texto do p com os valores, chamando as funções necessarias
     }
 }
