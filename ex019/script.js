@@ -9,33 +9,33 @@ function estaContido(valor) { // função que checa se um determinado numero est
     return false // se não encorntrar retorna false
 }
 
-function adicionar() {
+function adicionar() { // função adicionar, variaveis com query selector com cada elemento
     let tabela = document.querySelector('select#tabela')
     let valor = document.querySelector('input#valor').value
     let input = document.querySelector('input#valor')
     
-    if (valor.length == 0) {
+    if (valor.length == 0) { // checa se foi digitado algum valor
         input.value = ` `
         window.alert('Digite um valor válido!')
 
-    } else if (valor < 1 || valor > 100) {
+    } else if (valor < 1 || valor > 100) { // checa se está entre 1 e 100
         input.value = ` `
         window.alert(`digite entre 1 e 100`)
 
-    } else if (estaContido(valor)) {
+    } else if (estaContido(valor)) { // checa se está contido, booleano chamando a função está contido
         input.value = ` `
         window.alert('O valor já está contido!')
 
-    } else {
+    } else { // caso estiver tudo correto limpa a tabela, insere o valor no array e insere todo o array na tabela
         tabela.innerHTML = ` `
         input.value = ` `
         let nValor = Number(valor)
         numeros.push(nValor)
 
-        for(let i = 0; i < numeros.length; i++) {
-            let item = document.createElement('option')
-            item.innerText = `Valor ${numeros[i]} adicionado!`
-            tabela.appendChild(item)
+        for(let i = 0; i < numeros.length; i++) { // inserção dos valores do array
+            let item = document.createElement('option') // cria o elemento option da tabela
+            item.innerText = `Valor ${numeros[i]} adicionado!` // coloca o texto sendo o numero inserido
+            tabela.appendChild(item) // instancia o elemento
         }
 
     }
