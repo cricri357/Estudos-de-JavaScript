@@ -1,12 +1,12 @@
-let numeros = [] // teste de github
+let numeros = [] // inicia o array numeros vazio
 
-function estaContido(valor) {
-    for (let i = 0; i < numeros.length; i++) {
+function estaContido(valor) { // função que checa se um determinado numero está contido no array
+    for (let i = 0; i < numeros.length; i++) { // percorre o array checando cada valor se é o valor inserido
         if (numeros[i] == valor) {
-            return true
+            return true // se ecnocntrar retorna true
         }
     }
-    return false
+    return false // se não encorntrar retorna false
 }
 
 function adicionar() {
