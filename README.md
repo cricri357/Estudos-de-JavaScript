@@ -135,6 +135,18 @@ Praticar os principais conceitos de JavaScript por meio de exemplos e exercício
 
 ---
 
+### Aula 17 - Objetos
+
+**Conteúdo**
+- Introdução aos objetos em JavaScript.
+- Criação de objetos com propriedades e métodos.
+- Manipulação de atributos.
+- Definição e chamada de métodos.
+- Utilização da palavra-chave `this` (conceito) e organização de dados em objetos.
+
+**Exercício**
+- Criação de um objeto representando uma pessoa, contendo atributos como nome, sexo e peso, além de um método para alterar seu estado (`engordar`), demonstrando o funcionamento de propriedades e métodos em objetos.
+
 ## 💻 Exercícios Práticos
 
 ### 🌅 Exercício 015 - Hora do Dia
