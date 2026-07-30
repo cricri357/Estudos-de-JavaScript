@@ -9,6 +9,26 @@ function estaContido(valor) { // função que checa se um determinado numero est
     return false // se não encorntrar retorna false
 }
 
+function max() { // encontr o maior valor do array
+    let max = 0 // max começa zerado
+    for (let i = 0; i < numeros.length; i++) { // percorre o array
+        if (numeros[i] > max) { // se numero percorrido for maior que o max é o novo max
+            max = numeros[i]
+        }
+    }
+    return max
+}
+
+function min() { // encontra o menor valor do array
+    let min = numeros[1] // min começa sendo o primeiro valor do array
+    for (let i = 0; i < numeros.length; i++) { // percorre o array
+        if (numeros[i] < min) { // se o valor for menor que o primeiro valor, se torna o min
+            min = numeros[i]
+        }
+    }
+    return min
+}
+
 function soma() { // calcula a soma do array
     let sum = 0
     for (let i = 0; i < numeros.length; i++) { // percorre o array somando todos os valores
@@ -72,8 +92,8 @@ function finalizar() { // função finalizar
         let res_p = document.createElement('p') // cria elemento paragrafo
         res.appendChild(res_p) // instancia o p na div resultado
         res_p.innerText = `Ao todo temos ${numeros.length} número(s) cadastrados.
-        O maior valor informado foi ${Math.max(...numeros)}.
-        O menor valor informado foi ${Math.min(...numeros)}.
+        O maior valor informado foi ${max()}.
+        O menor valor informado foi ${min()}.
         Somando todos os valores, temos ${soma()}.
         A média dos valores digitados é ${avg()}.`
         // muda o texto do p com os valores, chamando as funções necessarias
